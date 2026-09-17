@@ -2,6 +2,7 @@
 
 'use strict';
 
+const fsSync = require('node:fs');
 const fs = require('node:fs/promises');
 const path = require('node:path');
 const { pathToFileURL } = require('node:url');
@@ -44,6 +45,30 @@ function slugify(value) {
 
 function documentId(relativeFile) {
   return `capitulo-${slugify(relativeFile.replace(/\.md$/i, '').replaceAll('/', '-'))}`;
+}
+
+function imageDataUrl(absoluteFile) {
+  const mimeTypes = {
+    '.gif': 'image/gif',
+    '.jpeg': 'image/jpeg',
+    '.jpg': 'image/jpeg',
+    '.png': 'image/png',
+    '.svg': 'image/svg+xml',
+    '.webp': 'image/webp',
+  };
+  const extension = path.extname(absoluteFile).toLowerCase();
+  const mimeType = mimeTypes[extension];
+
+  if (!mimeType) {
+    throw new Error(`formato de imagem local não suportado: ${absoluteFile}`);
+  }
+
+  try {
+    const base64 = fsSync.readFileSync(absoluteFile).toString('base64');
+    return `data:${mimeType};base64,${base64}`;
+  } catch (error) {
+    throw new Error(`não foi possível incorporar a imagem ${absoluteFile}: ${error.message}`);
+  }
 }
 
 function extractChapterFiles(summary) {
@@ -95,7 +120,7 @@ function configureMarkdown(includedFiles) {
           const source = token.attrGet('src');
           if (source && !/^(?:[a-z]+:|#)/i.test(source)) {
             const absolute = path.resolve(path.dirname(state.env.absoluteFile), decodeURI(source));
-            token.attrSet('src', pathToFileURL(absolute).href);
+            token.attrSet('src', imageDataUrl(absolute));
           }
         }
 
