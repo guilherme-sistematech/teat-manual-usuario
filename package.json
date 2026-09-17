@@ -1,0 +1,11 @@
+{
+  "name": "teat-manual-usuario",
+  "private": true,
+  "scripts": {
+    "pdf": "node scripts/gerar-pdf.js"
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.0",
+    "puppeteer": "^25.11.0"
+  }
+}
