@@ -27,9 +27,3 @@ Este manual orienta o uso do **Talonário Eletrônico do Agente de Trânsito (TE
 7. [FAQ](07-faq.md)
 8. [Suporte](08-suporte.md)
 9. [Controle do documento](09-controle-do-documento.md)
-
-## Como usar este manual
-
-Leia primeiro os capítulos de acesso, navegação e configurações. Para executar uma atividade específica, acesse diretamente o fluxo correspondente. Cada procedimento apresenta objetivo, pré-requisitos, passo a passo, resultado esperado e observações.
-
-> **Atenção:** as telas podem variar conforme o perfil do usuário, a política do órgão, a operação selecionada, o estado da conectividade e a versão instalada. Este manual descreve a aplicação 0.3.0 no estado auditado em 16/09/2026.
