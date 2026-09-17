@@ -11,6 +11,12 @@ Registrar o procedimento de alcoolemia, seu resultado, as circunstâncias da abo
 - etilômetro disponível e autorizado, se houver teste;
 - dados do equipamento e da medição quando exigidos.
 
+## Visão do fluxo
+
+![Diagrama de alcoolemia: seleção da situação, registro dos dados específicos, encaminhamento, termo, vínculos e finalização.](../assets/diagramas/alcoolemia.svg)
+
+Teste realizado, recusa, impossibilidade técnica e indisponibilidade do etilômetro levam a registros diferentes antes das etapas comuns de conclusão.
+
 ## Passo a passo
 
 1. Abra o procedimento de alcoolemia a partir do AIT, de uma medida sugerida ou do menu correspondente.
@@ -41,4 +47,3 @@ O procedimento fica registrado e auditável, com seus vínculos para AITs e medi
 - Recusa, impossibilidade técnica e indisponibilidade são situações distintas; selecione a que corresponde ao fato.
 - A presença do indicador de etilômetro no aplicativo não comprova homologação física do equipamento.
 - As etapas podem ser abertas dentro do componente de fluxo do AIT; isso não elimina suas regras próprias.
-

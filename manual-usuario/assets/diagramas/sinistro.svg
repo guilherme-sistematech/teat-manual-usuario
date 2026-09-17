@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 390" role="img" aria-labelledby="title desc">
+  <title id="title">Fluxo resumido de registro de sinistro</title><desc id="desc">Tipo e local, condições, envolvidos, vítimas condicionais, dinâmica, evidências, vínculos e revisão.</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0 10 3 0 6Z" fill="#376a9e"/></marker><style>.b{fill:#f6f9fc;stroke:#376a9e;stroke-width:3}.c{fill:#fff8e8;stroke:#d18a16;stroke-width:3}.d{fill:#eaf7ef;stroke:#27834d;stroke-width:3}.l{stroke:#376a9e;stroke-width:3;fill:none;marker-end:url(#a)}.t{font:600 19px Arial;fill:#173b64;text-anchor:middle}.s{font:16px Arial;fill:#405166;text-anchor:middle}.n{font:17px Arial;fill:#526174;text-anchor:middle}</style></defs>
+  <rect width="1200" height="390" rx="20" fill="#fff"/>
+  <rect class="b" x="25" y="115" width="155" height="95" rx="14"/><text class="t" x="102" y="151">Tipo e local</text><text class="s" x="102" y="179">endereço e GPS</text><path class="l" d="M180 162H205"/>
+  <rect class="b" x="205" y="115" width="155" height="95" rx="14"/><text class="t" x="282" y="151">Condições</text><text class="s" x="282" y="179">via e ambiente</text><path class="l" d="M360 162H385"/>
+  <rect class="b" x="385" y="115" width="165" height="95" rx="14"/><text class="t" x="467" y="151">Envolvidos</text><text class="s" x="467" y="179">veículos e pessoas</text><path class="l" d="M550 162H580"/>
+  <polygon class="c" points="665,92 750,162 665,232 580,162"/><text class="t" x="665" y="155">Há vítima?</text><text class="s" x="665" y="181">sim / não</text>
+  <path class="l" d="M665 92V48H805"/><text class="s" x="710" y="39">Sim</text><rect class="b" x="805" y="18" width="155" height="62" rx="13"/><text class="t" x="882" y="56">Registrar vítimas</text><path class="l" d="M960 49H995V117"/>
+  <path class="l" d="M750 162H805"/><text class="s" x="776" y="150">Não</text><rect class="b" x="805" y="115" width="155" height="95" rx="14"/><text class="t" x="882" y="151">Documentar</text><text class="s" x="882" y="179">dinâmica, croqui</text><text class="s" x="882" y="200">e evidências</text><path class="l" d="M960 162H995"/>
+  <rect class="d" x="995" y="115" width="180" height="95" rx="14"/><text class="t" x="1085" y="151">Vincular atos</text><text class="s" x="1085" y="179">revisar e finalizar</text>
+  <text class="n" x="600" y="310">AITs e medidas vinculados permanecem atos independentes.</text><text class="n" x="600" y="338">Sem vítima, a etapa específica é ignorada; as demais etapas continuam obrigatórias conforme o caso.</text>
+</svg>

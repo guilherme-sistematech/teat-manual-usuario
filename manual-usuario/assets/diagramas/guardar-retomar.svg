@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 390" role="img" aria-labelledby="title desc">
+  <title id="title">Fluxo para guardar e retomar um caso</title><desc id="desc">Interrupção do preenchimento, armazenamento como rascunho, retomada, recaptura de dados e finalização.</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0 10 3 0 6Z" fill="#376a9e"/></marker><style>.b{fill:#f6f9fc;stroke:#376a9e;stroke-width:3}.c{fill:#fff8e8;stroke:#d18a16;stroke-width:3}.d{fill:#eaf7ef;stroke:#27834d;stroke-width:3}.l{stroke:#376a9e;stroke-width:3;fill:none;marker-end:url(#a)}.t{font:600 20px Arial;fill:#173b64;text-anchor:middle}.s{font:16px Arial;fill:#405166;text-anchor:middle}.n{font:17px Arial;fill:#526174;text-anchor:middle}</style></defs>
+  <rect width="1200" height="390" rx="20" fill="#fff"/>
+  <rect class="b" x="25" y="120" width="175" height="100" rx="14"/><text class="t" x="112" y="158">Caso em</text><text class="t" x="112" y="183">andamento</text><path class="l" d="M200 170H225"/>
+  <rect class="c" x="225" y="120" width="175" height="100" rx="14"/><text class="t" x="312" y="158">Guardar</text><text class="s" x="312" y="185">confirmar interrupção</text><path class="l" d="M400 170H425"/>
+  <rect class="b" x="425" y="120" width="175" height="100" rx="14"/><text class="t" x="512" y="158">Rascunho</text><text class="s" x="512" y="185">sem número ou hash</text><path class="l" d="M600 170H625"/>
+  <rect class="b" x="625" y="120" width="175" height="100" rx="14"/><text class="t" x="712" y="158">Retomar</text><text class="s" x="712" y="185">identificar e revisar</text><path class="l" d="M800 170H825"/>
+  <rect class="c" x="825" y="120" width="150" height="100" rx="14"/><text class="t" x="900" y="158">Recapturar</text><text class="s" x="900" y="185">dados não preservados</text><path class="l" d="M975 170H1000"/>
+  <rect class="d" x="1000" y="120" width="175" height="100" rx="14"/><text class="t" x="1087" y="158">Finalizar</text><text class="s" x="1087" y="185">número + hash + fila</text>
+  <path class="l" d="M900 220V280H712V222"/><text class="n" x="806" y="310">Se faltarem fotos, assinatura ou GPS, volte à etapa correspondente.</text>
+  <text class="n" x="600" y="350">Guardar não produz um ato jurídico finalizado.</text>
+</svg>

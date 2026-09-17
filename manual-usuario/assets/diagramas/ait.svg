@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Fluxo resumido de lavratura do AIT</title><desc id="desc">Identificação, enquadramento, complementos, revisão e finalização do AIT.</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0 10 3 0 6Z" fill="#376a9e"/></marker><style>.b{fill:#f6f9fc;stroke:#376a9e;stroke-width:3}.c{fill:#fff8e8;stroke:#d18a16;stroke-width:3}.d{fill:#eaf7ef;stroke:#27834d;stroke-width:3}.l{stroke:#376a9e;stroke-width:3;fill:none;marker-end:url(#a)}.t{font:600 20px Arial;fill:#173b64;text-anchor:middle}.s{font:17px Arial;fill:#405166;text-anchor:middle}.n{font:17px Arial;fill:#526174;text-anchor:middle}</style></defs>
+  <rect width="1200" height="360" rx="20" fill="#fff"/>
+  <rect class="b" x="25" y="105" width="175" height="100" rx="14"/><text class="t" x="112" y="143">Veículo</text><text class="s" x="112" y="171">placa, OCR</text><text class="s" x="112" y="193">e conferência</text>
+  <path class="l" d="M200 155H225"/><rect class="b" x="225" y="105" width="175" height="100" rx="14"/><text class="t" x="312" y="143">Pessoa</text><text class="s" x="312" y="171">condutor ou</text><text class="s" x="312" y="193">responsável</text>
+  <path class="l" d="M400 155H425"/><rect class="c" x="425" y="105" width="175" height="100" rx="14"/><text class="t" x="512" y="143">Enquadrar</text><text class="s" x="512" y="171">MBFT e dados</text><text class="s" x="512" y="193">condicionais</text>
+  <path class="l" d="M600 155H625"/><rect class="b" x="625" y="105" width="175" height="100" rx="14"/><text class="t" x="712" y="143">Completar</text><text class="s" x="712" y="171">local, evidências,</text><text class="s" x="712" y="193">medidas e ciência</text>
+  <path class="l" d="M800 155H825"/><rect class="c" x="825" y="105" width="150" height="100" rx="14"/><text class="t" x="900" y="153">Revisar</text><text class="s" x="900" y="181">alertas</text>
+  <path class="l" d="M975 155H1000"/><rect class="d" x="1000" y="105" width="175" height="100" rx="14"/><text class="t" x="1087" y="143">Finalizar</text><text class="s" x="1087" y="171">número + hash</text><text class="s" x="1087" y="193">+ fila</text>
+  <path class="l" d="M900 205 V270 H712 V207"/><text class="n" x="806" y="297">Se houver alerta impeditivo, corrija a etapa indicada e revise novamente.</text>
+</svg>

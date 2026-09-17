@@ -12,6 +12,12 @@ Lavrar um Auto de Infração de Trânsito com identificação, enquadramento, lo
 - catálogo normativo válido;
 - permissões de câmera e localização, quando necessárias.
 
+## Visão do fluxo
+
+![Diagrama do AIT: identificação do veículo e da pessoa, enquadramento, complementos, revisão e finalização.](../assets/diagramas/ait.svg)
+
+Se a revisão indicar um alerta impeditivo, retorne à etapa apontada, corrija os dados e revise novamente antes de finalizar.
+
 ## Passo a passo
 
 1. Na navegação principal, selecione **Novo AIT**.
@@ -49,4 +55,3 @@ O número reservado é consumido, o AIT torna-se imutável, recebe hash e é inc
 - Um AIT finalizado não é editado silenciosamente. Correções, decisões e pedido de cancelamento seguem fluxos auditáveis.
 - O cancelamento solicitado pelo agente depende de análise da Diretoria.
 - Um caso apenas guardado ainda não possui número, hash nem item de sincronização.
-

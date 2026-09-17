@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 410" role="img" aria-labelledby="title desc">
+  <title id="title">Ciclo de sincronização e tratamento de exceções</title><desc id="desc">Registro finalizado percorre a fila até aplicação ou segue para tratamento de conflito ou rejeição.</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0 10 3 0 6Z" fill="#376a9e"/></marker><style>.b{fill:#f6f9fc;stroke:#376a9e;stroke-width:3}.c{fill:#fff8e8;stroke:#d18a16;stroke-width:3}.d{fill:#eaf7ef;stroke:#27834d;stroke-width:3}.e{fill:#fff0f0;stroke:#bd3f3f;stroke-width:3}.l{stroke:#376a9e;stroke-width:3;fill:none;marker-end:url(#a)}.x{stroke:#bd3f3f;stroke-width:3;fill:none;marker-end:url(#a)}.t{font:600 20px Arial;fill:#173b64;text-anchor:middle}.s{font:16px Arial;fill:#405166;text-anchor:middle}.n{font:17px Arial;fill:#526174;text-anchor:middle}</style></defs>
+  <rect width="1200" height="410" rx="20" fill="#fff"/>
+  <rect class="b" x="25" y="95" width="170" height="90" rx="14"/><text class="t" x="110" y="132">Registro</text><text class="s" x="110" y="158">finalizado</text><path class="l" d="M195 140H235"/>
+  <rect class="c" x="235" y="95" width="155" height="90" rx="14"/><text class="t" x="312" y="132">pending</text><text class="s" x="312" y="158">fila local</text><path class="l" d="M390 140H430"/>
+  <rect class="b" x="430" y="95" width="145" height="90" rx="14"/><text class="t" x="502" y="132">sent</text><text class="s" x="502" y="158">enviado</text><path class="l" d="M575 140H615"/>
+  <rect class="b" x="615" y="95" width="155" height="90" rx="14"/><text class="t" x="692" y="132">received</text><text class="s" x="692" y="158">recebido</text><path class="l" d="M770 140H810"/>
+  <rect class="d" x="810" y="95" width="155" height="90" rx="14"/><text class="t" x="887" y="132">applied</text><text class="s" x="887" y="158">processado</text>
+  <path class="x" d="M692 185V250"/><rect class="e" x="570" y="250" width="245" height="80" rx="14"/><text class="t" x="692" y="282">Conflito ou rejeição</text><text class="s" x="692" y="307">consultar detalhe e orientação</text>
+  <path class="l" d="M570 290H430V187"/><text class="n" x="472" y="319">Reenvio, quando autorizado</text>
+  <path class="l" d="M815 290H965"/><rect class="c" x="965" y="250" width="205" height="80" rx="14"/><text class="t" x="1067" y="282">Encaminhar</text><text class="s" x="1067" y="307">ou resolver com permissão</text>
+  <text class="n" x="600" y="380">Sem rede, o item permanece na fila; não recrie o ato.</text>
+</svg>

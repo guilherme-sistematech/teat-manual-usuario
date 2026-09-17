@@ -16,3 +16,8 @@ Cada procedimento deste capítulo segue a mesma estrutura: **Objetivo**, **Pré-
 
 Antes de iniciar, confirme que o turno e o contexto operacional estão ativos. Ao finalizar qualquer ato, confira a fila de sincronização.
 
+## Visão geral da jornada
+
+![Diagrama da jornada geral: acesso e abertura do turno, escolha da atividade, revisão, finalização e sincronização.](../assets/diagramas/visao-geral.svg)
+
+O diagrama apresenta o caminho comum. Cada atividade possui etapas e regras próprias, detalhadas nas páginas deste capítulo.

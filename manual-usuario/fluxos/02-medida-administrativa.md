@@ -13,6 +13,12 @@ Registrar uma medida administrativa como ato próprio, vinculada ou não a um AI
 
 A origem pode ser um AIT, ordem judicial, ato administrativo, veículo abandonado ou sinistro.
 
+## Visão do fluxo
+
+![Diagrama da medida administrativa: definição da origem e categoria, registro da execução, ciência, revisão e finalização.](../assets/diagramas/medida-administrativa.svg)
+
+As categorias abrem campos específicos, mas todas convergem para o registro do desfecho, da ciência e da finalização do ato.
+
 ## Passo a passo
 
 1. Acesse **Medidas** ou abra a sugestão apresentada durante outro fluxo.
@@ -65,4 +71,3 @@ A medida finalizada recebe hash próprio e entra na fila de sincronização inde
 - Uma medida vinculada continua sendo um ato distinto e auditável.
 - É possível guardar o caso de remoção enquanto aguarda reboque.
 - Após morte do processo, fotos gerais e GPS de um caso guardado de remoção podem não ser preservados e precisarão ser recapturados.
-

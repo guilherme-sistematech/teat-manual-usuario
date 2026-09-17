@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Fluxo resumido do procedimento de alcoolemia</title><desc id="desc">Escolha da situação, registros específicos e convergência para encaminhamento, termo, vínculos e finalização.</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0 10 3 0 6Z" fill="#376a9e"/></marker><style>.b{fill:#f6f9fc;stroke:#376a9e;stroke-width:3}.c{fill:#fff8e8;stroke:#d18a16;stroke-width:3}.d{fill:#eaf7ef;stroke:#27834d;stroke-width:3}.l{stroke:#376a9e;stroke-width:3;fill:none;marker-end:url(#a)}.t{font:600 20px Arial;fill:#173b64;text-anchor:middle}.s{font:16px Arial;fill:#405166;text-anchor:middle}.n{font:17px Arial;fill:#526174;text-anchor:middle}</style></defs>
+  <rect width="1200" height="430" rx="20" fill="#fff"/>
+  <rect class="b" x="25" y="165" width="170" height="90" rx="14"/><text class="t" x="110" y="200">Iniciar</text><text class="s" x="110" y="228">identificar contexto</text><path class="l" d="M195 210H245"/>
+  <polygon class="c" points="345,130 445,210 345,290 245,210"/><text class="t" x="345" y="202">Qual é a</text><text class="t" x="345" y="226">situação?</text>
+  <path class="l" d="M445 210 C475 210 475 63 510 63"/><rect class="b" x="510" y="30" width="245" height="66" rx="13"/><text class="t" x="632" y="59">Teste realizado</text><text class="s" x="632" y="82">dados, medição e resultado</text>
+  <path class="l" d="M445 210 C475 210 475 144 510 144"/><rect class="b" x="510" y="111" width="245" height="66" rx="13"/><text class="t" x="632" y="140">Recusa</text><text class="s" x="632" y="163">registrar circunstâncias</text>
+  <path class="l" d="M445 210 C475 210 475 225 510 225"/><rect class="b" x="510" y="192" width="245" height="66" rx="13"/><text class="t" x="632" y="221">Impossibilidade técnica</text><text class="s" x="632" y="244">registrar motivo</text>
+  <path class="l" d="M445 210 C475 210 475 306 510 306"/><rect class="b" x="510" y="273" width="245" height="66" rx="13"/><text class="t" x="632" y="302">Etilômetro indisponível</text><text class="s" x="632" y="325">registrar condição</text>
+  <path class="l" d="M755 63 C790 63 790 210 825 210"/><path class="l" d="M755 144 C790 144 790 210 825 210"/><path class="l" d="M755 225 C790 225 790 210 825 210"/><path class="l" d="M755 306 C790 306 790 210 825 210"/>
+  <rect class="c" x="825" y="155" width="165" height="110" rx="14"/><text class="t" x="907" y="192">Completar</text><text class="s" x="907" y="219">sinais, encaminhamento,</text><text class="s" x="907" y="243">termo e vínculos</text><path class="l" d="M990 210H1015"/>
+  <rect class="d" x="1015" y="155" width="160" height="110" rx="14"/><text class="t" x="1095" y="199">Revisar</text><text class="t" x="1095" y="226">e finalizar</text>
+  <text class="n" x="600" y="397">Selecione a situação que corresponde ao fato; as quatro opções não são equivalentes.</text>
+</svg>

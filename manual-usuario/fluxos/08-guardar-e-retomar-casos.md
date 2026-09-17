@@ -10,6 +10,12 @@ Interromper temporariamente um atendimento e retomá-lo depois, sem tratar o cas
 - caso iniciado e ainda não finalizado;
 - motivo operacional para interromper o preenchimento.
 
+## Visão do fluxo
+
+![Diagrama para guardar e retomar: interrupção, rascunho, retomada, recaptura de dados e finalização.](../assets/diagramas/guardar-retomar.svg)
+
+O caso guardado é um rascunho. Somente a finalização produz número, hash e item na fila, quando aplicáveis.
+
 ## Passo a passo
 
 1. No fluxo em andamento, selecione a opção de guardar ou salvar o caso.
@@ -38,4 +44,3 @@ O preenchimento é retomado e, somente depois da finalização, o ato recebe nú
 - Fotos e assinatura do caso de AIT não são preservadas e precisam ser recapturadas.
 - Em remoção aguardando reboque, fotos gerais e GPS podem não sobreviver à retomada após morte do processo.
 - Sempre confira a identidade do caso antes de continuar para evitar associação de dados ao atendimento errado.
-

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Visão geral dos principais fluxos do TEAT</title>
+  <desc id="desc">Do acesso e abertura do turno à escolha da atividade, revisão, finalização, sincronização e encerramento.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 Z" fill="#376a9e"/></marker>
+    <style>.box{fill:#f6f9fc;stroke:#376a9e;stroke-width:3}.choice{fill:#fff8e8;stroke:#d18a16;stroke-width:3}.done{fill:#eaf7ef;stroke:#27834d;stroke-width:3}.line{fill:none;stroke:#376a9e;stroke-width:3;marker-end:url(#arrow)}.label{font:600 22px Arial,sans-serif;fill:#173b64;text-anchor:middle}.small{font:18px Arial,sans-serif;fill:#334155;text-anchor:middle}.note{font:17px Arial,sans-serif;fill:#526174;text-anchor:middle}</style>
+  </defs>
+  <rect width="1200" height="430" rx="20" fill="#fff"/>
+  <rect class="box" x="35" y="160" width="165" height="82" rx="14"/><text class="label" x="117" y="194">Acessar</text><text class="small" x="117" y="220">e abrir turno</text>
+  <path class="line" d="M200 201 H265"/>
+  <polygon class="choice" points="370,125 475,201 370,277 265,201"/><text class="label" x="370" y="194">Escolher</text><text class="small" x="370" y="220">atividade</text>
+  <path class="line" d="M475 201 H540"/>
+  <rect class="box" x="540" y="46" width="215" height="65" rx="13"/><text class="label" x="647" y="87">AIT</text>
+  <rect class="box" x="540" y="128" width="215" height="65" rx="13"/><text class="label" x="647" y="169">Medida</text>
+  <rect class="box" x="540" y="210" width="215" height="65" rx="13"/><text class="label" x="647" y="251">Sinistro</text>
+  <rect class="box" x="540" y="292" width="215" height="65" rx="13"/><text class="label" x="647" y="333">Outros registros</text>
+  <path class="line" d="M475 201 C505 201 505 78 540 78"/><path class="line" d="M475 201 C505 201 505 160 540 160"/><path class="line" d="M475 201 C505 201 505 242 540 242"/><path class="line" d="M475 201 C505 201 505 324 540 324"/>
+  <path class="line" d="M755 78 C790 78 790 201 825 201"/><path class="line" d="M755 160 C790 160 790 201 825 201"/><path class="line" d="M755 242 C790 242 790 201 825 201"/><path class="line" d="M755 324 C790 324 790 201 825 201"/>
+  <rect class="choice" x="825" y="160" width="155" height="82" rx="14"/><text class="label" x="902" y="194">Revisar</text><text class="small" x="902" y="220">e finalizar</text>
+  <path class="line" d="M980 201 H1025"/>
+  <rect class="done" x="1025" y="140" width="145" height="122" rx="14"/><text class="label" x="1097" y="184">Fila de</text><text class="label" x="1097" y="211">sincronização</text><text class="small" x="1097" y="239">e retaguarda</text>
+  <text class="note" x="600" y="400">Ao fim do serviço: conferir pendências, liquidar a numeração e encerrar o turno.</text>
+</svg>

@@ -43,6 +43,12 @@ Enviar registros à central e acompanhar processamento, rejeições, mídia e co
 - conectividade para transmissão;
 - permissão de supervisor para resoluções restritas.
 
+### Visão do fluxo
+
+![Diagrama da sincronização: fila local, envio, recebimento, aplicação e tratamento de conflito ou rejeição.](../assets/diagramas/sincronizacao.svg)
+
+Sem conectividade, o item permanece na fila local. Conflitos e rejeições devem ser tratados a partir do detalhe do item, conforme a permissão do usuário.
+
 ### Passo a passo
 
 1. Abra **Sincronização**.

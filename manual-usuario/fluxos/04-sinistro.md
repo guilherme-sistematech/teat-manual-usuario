@@ -11,6 +11,12 @@ Registrar um sinistro de trânsito com local, condições, veículos, pessoas, v
 - autorização para tratar dados pessoais sensíveis;
 - permissões de câmera, arquivos e localização, quando necessárias.
 
+## Visão do fluxo
+
+![Diagrama do sinistro: tipo, local, condições, envolvidos, decisão sobre vítimas, documentação, vínculos e finalização.](../assets/diagramas/sinistro.svg)
+
+A etapa de vítimas só é preenchida quando aplicável. AITs e medidas relacionados seguem como atos independentes.
+
 ## Passo a passo
 
 1. Selecione **Sinistro**.
@@ -43,4 +49,3 @@ O registro recebe hash, entra na fila de sincronização e fica disponível para
 - São aceitos até seis veículos e quatro testemunhas.
 - Os dados de vítimas exigem cuidado reforçado por serem informações pessoais sensíveis.
 - AIT e medida vinculados continuam sendo atos próprios, com auditoria independente.
-

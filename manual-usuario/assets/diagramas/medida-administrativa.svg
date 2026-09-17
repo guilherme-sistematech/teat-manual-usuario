@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Fluxo resumido de medida administrativa</title><desc id="desc">Origem, categoria, campos específicos, desfecho, ciência, revisão e finalização.</desc>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0 10 3 0 6Z" fill="#376a9e"/></marker><style>.b{fill:#f6f9fc;stroke:#376a9e;stroke-width:3}.c{fill:#fff8e8;stroke:#d18a16;stroke-width:3}.d{fill:#eaf7ef;stroke:#27834d;stroke-width:3}.l{stroke:#376a9e;stroke-width:3;fill:none;marker-end:url(#a)}.t{font:600 21px Arial;fill:#173b64;text-anchor:middle}.s{font:17px Arial;fill:#405166;text-anchor:middle}.n{font:17px Arial;fill:#526174;text-anchor:middle}</style></defs>
+  <rect width="1200" height="430" rx="20" fill="#fff"/>
+  <rect class="b" x="30" y="160" width="165" height="90" rx="14"/><text class="t" x="112" y="195">Definir origem</text><text class="s" x="112" y="223">AIT, ordem, sinistro…</text><path class="l" d="M195 205H250"/>
+  <polygon class="c" points="355,125 460,205 355,285 250,205"/><text class="t" x="355" y="198">Selecionar</text><text class="s" x="355" y="224">categoria</text>
+  <path class="l" d="M460 205H520"/><rect class="b" x="520" y="45" width="210" height="65" rx="13"/><text class="t" x="625" y="85">Retenção</text><rect class="b" x="520" y="125" width="210" height="65" rx="13"/><text class="t" x="625" y="165">Remoção</text><rect class="b" x="520" y="205" width="210" height="65" rx="13"/><text class="t" x="625" y="245">Recolhimento</text><rect class="b" x="520" y="285" width="210" height="65" rx="13"/><text class="t" x="625" y="325">Demais categorias</text>
+  <path class="l" d="M460 205 C490 205 490 77 520 77"/><path class="l" d="M460 205 C490 205 490 157 520 157"/><path class="l" d="M460 205 C490 205 490 237 520 237"/><path class="l" d="M460 205 C490 205 490 317 520 317"/>
+  <path class="l" d="M730 77 C765 77 765 205 800 205"/><path class="l" d="M730 157 C765 157 765 205 800 205"/><path class="l" d="M730 237 C765 237 765 205 800 205"/><path class="l" d="M730 317 C765 317 765 205 800 205"/>
+  <rect class="c" x="800" y="150" width="165" height="110" rx="14"/><text class="t" x="882" y="190">Registrar</text><text class="s" x="882" y="218">execução, desfecho</text><text class="s" x="882" y="241">e ciência</text><path class="l" d="M965 205H1010"/>
+  <rect class="d" x="1010" y="150" width="160" height="110" rx="14"/><text class="t" x="1090" y="190">Revisar</text><text class="t" x="1090" y="217">e finalizar</text><text class="s" x="1090" y="242">hash + fila</text>
+  <text class="n" x="600" y="400">Cada medida é um ato próprio e auditável, mesmo quando vinculada a outro registro.</text>
+</svg>
