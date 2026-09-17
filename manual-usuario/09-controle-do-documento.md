@@ -1,0 +1,40 @@
+# Controle do documento
+
+## Identificação
+
+| Campo | Valor |
+|---|---|
+| Documento | Manual do Usuário — TEAT |
+| Versão do manual | 1.0 |
+| Versão declarada da aplicação | 0.3.0 |
+| Runtime Expo | 0.3.0(3) |
+| Android `versionCode` | 3 |
+| Código auditado | `add80bedfa38a07ac9424c03f29218a239cafe21` |
+| Data da atualização | 16/09/2026 |
+| Situação | Primeira versão estruturada do manual |
+
+## Referências
+
+- [Relatório de apresentação da aplicação](../RELATORIO-APRESENTACAO-APLICACAO.md)
+- [Comparativo entre relatório e aplicação](../COMPARATIVO-RELATORIO-VS-TEAT-MOBILE-EXPO.md)
+- [Mapa de funcionalidades](../MAPADEFUNCIONALIDADES.md)
+- [Inventário de telas claras](../talonario-telas-2026-09-08-claro/README.md)
+- [Inventário de telas escuras](../talonario-telas-2026-09-08/README.md)
+- [Inventário de blueprints](../talonario-blueprints-2026-09-08/README.md)
+
+## Histórico de alterações
+
+| Versão | Data | Alteração | Responsável |
+|---|---|---|---|
+| 1.0 | 16/09/2026 | Criação do manual a partir do relatório atualizado; inclusão de acesso, configurações, fluxos, regras, mensagens, FAQ e suporte | Equipe do projeto |
+
+## Política de atualização
+
+Revise o manual quando houver mudança de versão, regra de domínio, política operacional, integração, periférico homologado ou fluxo de tela. Antes de publicar nova edição:
+
+1. compare o conteúdo com o registro atual de rotas e testes;
+2. valide os procedimentos com a área de negócio;
+3. substitua os placeholders por capturas da mesma versão documentada;
+4. confirme canais de suporte e dados institucionais;
+5. registre a alteração na tabela de histórico.
+
