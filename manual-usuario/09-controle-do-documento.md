@@ -15,12 +15,14 @@
 
 ## Referências
 
-- [Relatório de apresentação da aplicação](../RELATORIO-APRESENTACAO-APLICACAO.md)
-- [Comparativo entre relatório e aplicação](../COMPARATIVO-RELATORIO-VS-TEAT-MOBILE-EXPO.md)
-- [Mapa de funcionalidades](../MAPADEFUNCIONALIDADES.md)
-- [Inventário de telas claras](../talonario-telas-2026-09-08-claro/README.md)
-- [Inventário de telas escuras](../talonario-telas-2026-09-08/README.md)
-- [Inventário de blueprints](../talonario-blueprints-2026-09-08/README.md)
+As referências abaixo são materiais internos preservados no repositório e não fazem parte do site público:
+
+- relatório de apresentação da aplicação: `docs/RELATORIO-APRESENTACAO-APLICACAO.md`;
+- comparativo entre relatório e aplicação: `docs/COMPARATIVO-RELATORIO-VS-TEAT-MOBILE-EXPO.md`;
+- mapa de funcionalidades: `docs/MAPADEFUNCIONALIDADES.md`;
+- inventário de telas claras: `docs/talonario-telas-2026-09-08-claro/README.md`;
+- inventário de telas escuras: `docs/talonario-telas-2026-09-08/README.md`;
+- inventário de blueprints: `docs/talonario-blueprints-2026-09-08/README.md`.
 
 ## Histórico de alterações
 
@@ -37,4 +39,3 @@ Revise o manual quando houver mudança de versão, regra de domínio, política 
 3. substitua os placeholders por capturas da mesma versão documentada;
 4. confirme canais de suporte e dados institucionais;
 5. registre a alteração na tabela de histórico.
-
