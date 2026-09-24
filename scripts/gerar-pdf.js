@@ -11,7 +11,7 @@ const puppeteer = require('puppeteer');
 
 const projectDir = path.resolve(__dirname, '..');
 const manualDir = path.join(projectDir, 'manual-usuario');
-const summaryFile = path.join(manualDir, 'README.md');
+const summaryFile = path.join(manualDir, 'index.md');
 const defaultOutput = path.join(projectDir, 'dist', 'manual-usuario-teat.pdf');
 
 function parseArguments(argv) {
@@ -73,7 +73,7 @@ function imageDataUrl(absoluteFile) {
 
 function extractChapterFiles(summary) {
   const summarySection = summary.match(/## Sumário\s+([\s\S]*?)(?=\n## |$)/i);
-  if (!summarySection) throw new Error('A seção "Sumário" não foi encontrada em manual-usuario/README.md.');
+  if (!summarySection) throw new Error('A seção "Sumário" não foi encontrada em manual-usuario/index.md.');
 
   const files = [];
   const markdownLink = /\[[^\]]+\]\(([^)#]+\.md)(?:#[^)]+)?\)/gi;
@@ -147,7 +147,7 @@ function configureMarkdown(includedFiles) {
 }
 
 async function readDocuments() {
-  const summary = await fs.readFile(summaryFile, 'utf8');
+  const summary = stripFrontMatter(await fs.readFile(summaryFile, 'utf8'));
   const chapterFiles = extractChapterFiles(summary);
   const includedFiles = new Set(chapterFiles);
   const markdown = configureMarkdown(includedFiles);
@@ -155,7 +155,7 @@ async function readDocuments() {
   const summaryStart = introduction.search(/^## Sumário\s*$/m);
   const documents = [
     {
-      relativeFile: 'README.md',
+      relativeFile: 'index.md',
       content: summaryStart >= 0 ? introduction.slice(0, summaryStart).trim() : introduction,
       cover: true,
       documentId: 'capa',
@@ -164,7 +164,7 @@ async function readDocuments() {
 
   if (summaryStart >= 0) {
     documents.push({
-      relativeFile: 'README.md',
+      relativeFile: 'index.md',
       content: introduction.slice(summaryStart).trim(),
       frontmatter: true,
       documentId: 'sumario',
