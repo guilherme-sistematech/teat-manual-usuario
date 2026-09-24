@@ -35,7 +35,7 @@ npm ci
 npm run pdf
 ```
 
-O arquivo será criado em `dist/manual-usuario-teat.pdf`. Para escolher outro destino:
+O arquivo será criado em `dist/manual-usuario-teat.pdf`. Esse é o PDF canônico versionado no Git. Para escolher outro destino:
 
 ```bash
 npm run pdf -- --output dist/outro-nome.pdf
@@ -51,6 +51,29 @@ npm run pdf -- --output dist/outro-nome.pdf
 6. Gere o PDF e confira links, imagens, sumário e quebras de página antes da revisão.
 
 Conteúdo ainda não aprovado deve permanecer em `docs/editorial/`, fora da origem publicada.
+
+## Preparar uma versão
+
+A versão do manual segue o formato SemVer e tem o `package.json` como fonte de verdade:
+
+- `patch`: correções de texto, links e imagens;
+- `minor`: novos capítulos, fluxos ou funcionalidades;
+- `major`: mudanças incompatíveis de estrutura, público ou processo.
+
+Depois de concluir a edição, prepare a próxima versão informando o impacto e uma descrição para o histórico:
+
+```bash
+npm run release:prepare -- patch "Corrigir orientação de acesso"
+```
+
+O comando atualiza a versão, a data e o histórico do documento, gera o PDF e recalcula a assinatura das fontes. Revise os arquivos resultantes e execute:
+
+```bash
+npm run check:links
+npm run release:check
+```
+
+Depois do merge em `main`, o workflow de release cria automaticamente a tag correspondente e publica o PDF no GitHub Releases. Uma versão já publicada é imutável; qualquer nova atualização exige outra versão.
 
 ## Publicação
 
@@ -69,4 +92,4 @@ Antes de integrar uma mudança em `main`, confirme que:
 
 Diretórios datados dentro de `docs/` são snapshots. Preserve a data, a versão e a origem do lote; para representar outra versão da aplicação, crie um novo snapshot em vez de substituir silenciosamente os arquivos existentes.
 
-O PDF canônico em `dist/manual-usuario-teat.pdf` é versionado. Outros artefatos gerados em `dist/` permanecem ignorados.
+O PDF canônico em `dist/manual-usuario-teat.pdf` e a assinatura `dist/manual-usuario-teat.sources.sha256` são versionados. Outros artefatos gerados em `dist/` permanecem ignorados.

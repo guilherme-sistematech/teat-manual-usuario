@@ -1,12 +1,16 @@
 {
   "name": "teat-manual-usuario",
+  "version": "1.0.0",
   "private": true,
   "packageManager": "npm@11.17.0",
   "engines": {
     "node": ">=22.12.0"
   },
   "scripts": {
-    "pdf": "node scripts/gerar-pdf.js"
+    "pdf": "node scripts/gerar-pdf.js",
+    "check:links": "node scripts/validar-links.js",
+    "release:check": "node scripts/validar-release.js",
+    "release:prepare": "node scripts/preparar-release.js"
   },
   "dependencies": {
     "markdown-it": "^14.1.0",
