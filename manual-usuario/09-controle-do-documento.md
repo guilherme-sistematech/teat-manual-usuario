@@ -5,12 +5,12 @@
 | Campo | Valor |
 |---|---|
 | Documento | Manual do Usuário — TEAT |
-| Versão do manual | 1.0.0 |
+| Versão do manual | 1.0.1 |
 | Versão declarada da aplicação | 0.3.0 |
 | Runtime Expo | 0.3.0(3) |
 | Android `versionCode` | 3 |
 | Código auditado | `add80bedfa38a07ac9424c03f29218a239cafe21` |
-| Data da atualização | 16/09/2026 |
+| Data da atualização | 24/09/2026 |
 | Situação | Primeira versão estruturada do manual |
 
 ## Referências
@@ -28,6 +28,7 @@ As referências abaixo são materiais internos preservados no repositório e nã
 
 | Versão | Data | Alteração | Responsável |
 |---|---|---|---|
+| 1.0.1 | 24/09/2026 | Corrigir geração do PDF no GitHub Actions | Equipe do projeto |
 | 1.0.0 | 16/09/2026 | Criação do manual a partir do relatório atualizado; inclusão de acesso, configurações, fluxos, regras, mensagens, FAQ e suporte | Equipe do projeto |
 
 ## Política de atualização

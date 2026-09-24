@@ -35,6 +35,9 @@ jobs:
         run: npm run check
 
       - name: Testar geração do PDF
+        env:
+          # O job processa apenas Markdown e assets revisados deste repositório.
+          PUPPETEER_NO_SANDBOX: 'true'
         run: npm run pdf -- --output /tmp/manual-usuario-teat.pdf
 
       - name: Configurar GitHub Pages

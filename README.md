@@ -41,6 +41,8 @@ O arquivo será criado em `dist/manual-usuario-teat.pdf`. Esse é o PDF canônic
 npm run pdf -- --output dist/outro-nome.pdf
 ```
 
+O Chromium usa sua sandbox de segurança por padrão. Nos runners efêmeros do GitHub Actions, que processam somente conteúdo revisado deste repositório, os workflows definem `PUPPETEER_NO_SANDBOX=true` para contornar a restrição de AppArmor. Não use essa opção para renderizar conteúdo externo ou não confiável.
+
 ## Editar o manual
 
 1. Confirme em `manual-usuario/09-controle-do-documento.md` qual versão da aplicação está documentada.

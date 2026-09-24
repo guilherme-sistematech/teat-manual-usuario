@@ -70,6 +70,8 @@ jobs:
       - name: Gerar artefatos da versão
         if: steps.state.outputs.release_exists != 'true'
         env:
+          # O job processa apenas Markdown e assets revisados deste repositório.
+          PUPPETEER_NO_SANDBOX: 'true'
           VERSION: ${{ steps.version.outputs.version }}
         shell: bash
         run: |

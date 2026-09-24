@@ -288,14 +288,23 @@ function buildHtml(body) {
 async function generatePdf(output) {
   const html = buildHtml(await readDocuments());
   await fs.mkdir(path.dirname(output), { recursive: true });
+  const disableSandbox = process.getuid?.() === 0
+    || process.env.PUPPETEER_NO_SANDBOX === 'true';
 
   let browser;
   try {
     browser = await puppeteer.launch({
       headless: true,
-      args: process.getuid?.() === 0 ? ['--no-sandbox'] : [],
+      args: disableSandbox ? ['--no-sandbox'] : [],
     });
   } catch (error) {
+    if (/No usable sandbox/i.test(error.message)) {
+      throw new Error(
+        `o Chromium não encontrou uma sandbox utilizável. Configure a sandbox do ambiente `
+        + `ou, somente para conteúdo confiável, defina PUPPETEER_NO_SANDBOX=true. `
+        + `Detalhe: ${error.message}`,
+      );
+    }
     throw new Error(
       `não foi possível iniciar o Chromium. Instale as dependências de sistema `
       + `documentadas pelo Puppeteer ou defina PUPPETEER_EXECUTABLE_PATH para um `
