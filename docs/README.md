@@ -10,6 +10,8 @@ Este diretório reúne os materiais usados para elaborar e validar o Manual do U
 - [Comparativo entre relatório e aplicação](COMPARATIVO-RELATORIO-VS-TEAT-MOBILE-EXPO.md)
 - [Mapa de funcionalidades](MAPADEFUNCIONALIDADES.md)
 - [Identidade visual e tom de voz](relatorio-identidade-visual-e-tom-de-voz.md)
+- [Plano de aplicação da identidade visual do DETRAN-AM](plano-identidade-visual-detran-am.md)
+- `identidade-visual-detran-AM/`: marcas institucionais fornecidas para o Manual do TEAT
 - `Manual_DER_v2.pdf`: documento de referência em PDF
 
 ### Evidências de 08/09/2026

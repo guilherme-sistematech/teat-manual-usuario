@@ -18,7 +18,9 @@ function listFiles(directory) {
 function sourceFiles() {
   return [
     ...listFiles(path.join(projectDir, 'manual-usuario')),
+    ...listFiles(path.join(projectDir, 'docs', 'identidade-visual-detran-AM')),
     path.join(projectDir, 'scripts', 'gerar-pdf.js'),
+    path.join(projectDir, 'scripts', 'fontes-pdf.js'),
     path.join(projectDir, 'package-lock.json'),
   ].sort((left, right) => left.localeCompare(right));
 }
