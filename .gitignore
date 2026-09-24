@@ -1,3 +1,4 @@
 node_modules/
-dist/
-
+dist/*
+!dist/manual-usuario-teat.pdf
+!dist/manual-usuario-teat.sources.sha256

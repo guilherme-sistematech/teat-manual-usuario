@@ -12,7 +12,7 @@ Este repositório mantém o Manual do Usuário do Talonário Eletrônico do Agen
 | `manual-usuario/assets/` | Diagramas e imagens incorporados ao manual |
 | `docs/` | Relatórios, evidências e controles editoriais internos |
 | `scripts/` | Automação para geração de artefatos |
-| `dist/` | Saída local gerada; não versionada |
+| `dist/` | PDF publicado e assinatura das fontes |
 
 Consulte também o [índice da documentação interna](docs/README.md) e as [pendências de validação](docs/editorial/pendencias-de-validacao.md).
 
@@ -69,4 +69,4 @@ Antes de integrar uma mudança em `main`, confirme que:
 
 Diretórios datados dentro de `docs/` são snapshots. Preserve a data, a versão e a origem do lote; para representar outra versão da aplicação, crie um novo snapshot em vez de substituir silenciosamente os arquivos existentes.
 
-Não adicione artefatos gerados em `dist/` ao Git. A política definitiva para armazenamento dos conjuntos pesados de imagens e PDFs será tratada separadamente.
+O PDF canônico em `dist/manual-usuario-teat.pdf` é versionado. Outros artefatos gerados em `dist/` permanecem ignorados.
