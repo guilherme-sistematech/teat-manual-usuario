@@ -22,6 +22,21 @@ jobs:
       - name: Baixar repositório
         uses: actions/checkout@v4
 
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Validar conteúdo e release
+        run: npm run check
+
+      - name: Testar geração do PDF
+        run: npm run pdf -- --output /tmp/manual-usuario-teat.pdf
+
       - name: Configurar GitHub Pages
         uses: actions/configure-pages@v5
 

@@ -1,0 +1,103 @@
+name: Publicar release do manual
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-manual
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Validar conteúdo e release
+        run: npm run check
+
+      - name: Identificar versão
+        id: version
+        shell: bash
+        run: |
+          version="$(node -p "require('./package.json').version")"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "tag=v$version" >> "$GITHUB_OUTPUT"
+
+      - name: Verificar estado da versão
+        id: state
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.version.outputs.tag }}
+        shell: bash
+        run: |
+          if git rev-parse --verify --quiet "refs/tags/$TAG" >/dev/null; then
+            tagged_signature="$(git show "$TAG:dist/manual-usuario-teat.sources.sha256")"
+            current_signature="$(cat dist/manual-usuario-teat.sources.sha256)"
+            if [ "$tagged_signature" != "$current_signature" ]; then
+              echo "As fontes mudaram após $TAG. Incremente a versão do manual." >&2
+              exit 1
+            fi
+            echo "tag_exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "tag_exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "release_exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "release_exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Gerar artefatos da versão
+        if: steps.state.outputs.release_exists != 'true'
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        shell: bash
+        run: |
+          pdf="/tmp/manual-usuario-teat-v$VERSION.pdf"
+          npm run pdf -- --output "$pdf"
+          sha256sum "$pdf" > "$pdf.sha256"
+
+      - name: Criar tag anotada
+        if: steps.state.outputs.tag_exists != 'true'
+        env:
+          TAG: ${{ steps.version.outputs.tag }}
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -a "$TAG" -m "Manual TEAT $TAG" "$GITHUB_SHA"
+          git push origin "$TAG"
+
+      - name: Criar GitHub Release
+        if: steps.state.outputs.release_exists != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.version.outputs.tag }}
+          VERSION: ${{ steps.version.outputs.version }}
+        shell: bash
+        run: |
+          pdf="/tmp/manual-usuario-teat-v$VERSION.pdf"
+          gh release create "$TAG" "$pdf" "$pdf.sha256" \
+            --title "Manual do Usuário TEAT v$VERSION" \
+            --generate-notes \
+            --verify-tag

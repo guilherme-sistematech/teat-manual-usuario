@@ -1,0 +1,43 @@
+name: Validar manual
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Validar conteúdo e release
+        run: npm run check
+
+      - name: Exigir nova versão para alterações publicáveis
+        if: github.event_name == 'pull_request'
+        run: node scripts/validar-incremento-versao.js "${{ github.event.pull_request.base.sha }}"
+
+      - name: Gerar PDF de conferência
+        run: npm run pdf -- --output /tmp/manual-usuario-teat.pdf
+
+      - name: Publicar PDF de conferência
+        uses: actions/upload-artifact@v4
+        with:
+          name: manual-usuario-teat
+          path: /tmp/manual-usuario-teat.pdf
+          if-no-files-found: error

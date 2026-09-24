@@ -8,6 +8,7 @@
   },
   "scripts": {
     "pdf": "node scripts/gerar-pdf.js",
+    "check": "npm run check:links && npm run release:check",
     "check:links": "node scripts/validar-links.js",
     "release:check": "node scripts/validar-release.js",
     "release:prepare": "node scripts/preparar-release.js"
