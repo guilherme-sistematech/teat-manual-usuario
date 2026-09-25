@@ -26,7 +26,8 @@ Este manual orienta o uso do **Talonário Eletrônico do Agente de Trânsito (TE
 6. [Mensagens e problemas comuns](06-mensagens-e-problemas-comuns.md)
 7. [FAQ](07-faq.md)
 8. [Suporte](08-suporte.md)
-9. [Controle do documento](09-controle-do-documento.md)
+9. [Glossário](glossario.md)
+10. [Controle do documento](09-controle-do-documento.md)
 
 ## Como usar este manual
 
